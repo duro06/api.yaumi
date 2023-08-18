@@ -17,7 +17,7 @@ class Kernel extends ConsoleKernel
     {
         // $schedule->command('inspire')->hourly();
         $schedule->command('sanctum:prune-expired')->daily();
-        $schedule->command('hello:world')->everyMinute();
+        // $schedule->command('hello:world')->everyMinute();
         // $schedule->call(function () {
         //     info('called every minutes');
         // })->everyMinute();
