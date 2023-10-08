@@ -16,10 +16,10 @@ class CreateTokosTable extends Migration
         Schema::create('tokos', function (Blueprint $table) {
             $table->id();
             $table->string('nama', 100);
-            $table->text('alamat');
-            $table->string('kota', 50);
-            $table->string('tlp', 20);
-            $table->string('logo', 100);
+            $table->text('alamat')->nullable();
+            $table->string('kota', 50)->nullable();
+            $table->string('tlp', 20)->nullable();
+            $table->string('logo', 100)->nullable();
             $table->timestamps();
             // $table->comment('t_app');
         });
