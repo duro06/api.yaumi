@@ -23,7 +23,7 @@ class CreateItemBarangsTable extends Migration
             $table->double('harga_jual_umum', 20, 2)->default(0);
             $table->integer('stok_awal_toko')->default(0); // stok awal toko
             $table->integer('stok_awal_gudang')->default(0); // stok awal gudang
-            $table->integer('rak', 10)->default(0); // nomor rak
+            $table->integer('rak')->default(0); // nomor rak
             $table->integer('limit_stok')->default(0);
             $table->unsignedBigInteger('user_id')->nullable(); // user_id
             $table->timestamps();

@@ -22,7 +22,7 @@ class CreateAppMenusTable extends Migration
             $table->tinyInteger('id_main')->nullable();
             $table->tinyInteger('urut')->nullable();
             $table->timestamps();
-            $table->comment('appmenu');
+            // $table->comment('appmenu');
         });
     }
 

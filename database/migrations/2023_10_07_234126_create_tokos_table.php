@@ -21,7 +21,7 @@ class CreateTokosTable extends Migration
             $table->string('tlp', 20);
             $table->string('logo', 100);
             $table->timestamps();
-            $table->comment('t_app');
+            // $table->comment('t_app');
         });
     }
 
