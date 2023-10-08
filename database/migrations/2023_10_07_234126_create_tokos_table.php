@@ -19,7 +19,7 @@ class CreateTokosTable extends Migration
             $table->text('alamat')->nullable();
             $table->string('kota', 50)->nullable();
             $table->string('tlp', 20)->nullable();
-            $table->string('logo', 100)->nullable();
+            $table->string('logo', 100)->nullable()->default(null);
             $table->timestamps();
             // $table->comment('t_app');
         });
