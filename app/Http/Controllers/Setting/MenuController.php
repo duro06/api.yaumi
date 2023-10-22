@@ -18,12 +18,9 @@ class MenuController extends Controller
         $res = AppMenu::whereNotIn('id', $restricted)->where('is_main', '>=', 1)->orderby('urut', 'ASC')->get();
         $sub = AppMenu::whereNotIn('id', $restricted)->where('is_main', '<=', 0)->get();
         $menu = collect($res);
-        // $smenu = collect($sub);
         foreach ($menu as $key) {
             $temp = $sub->where('id_main', $key->id);
-            // $temp->all();
             $key->submenus = $temp;
-            // return new JsonResponse($temp);
         }
         $data = $menu;
         return new JsonResponse($data);
